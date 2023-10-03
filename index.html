@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- VueJs  -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+  <!-- Bootestrap  -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css' integrity='sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==' crossorigin='anonymous'/>
+
+  <!-- Luxon  -->
+  <script src=" https://cdn.jsdelivr.net/npm/luxon@3.4.3/build/global/luxon.min.js "></script>
+
+
+  <title>Luxon</title>
+</head>
+<body>
+
+  <div id="app">
+    <div class="container my-5">
+
+      <h1>{{ titolo }}</h1>
+      <h2>{{ clock }}</h2>
+      <h4>I secondi sono {{ oddEvenSecond }}</h4>
+
+      <h5>Task fatti</h5>
+      <ul>
+        <li v-for="task in taskFatti">{{ task.text }}</li>
+      </ul>
+
+      <h5>Task non fatti</h5>
+      <ul>
+        <li v-for="task in taskNonFatti">{{ task.text }}</li>
+      </ul>
+
+
+    </div>
+
+    
+  </div>
+  
+  <script type="module" src="./script.js"></script>
+</body>
+</html>
